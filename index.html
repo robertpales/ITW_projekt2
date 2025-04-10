@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP</title>
+    <!--font awesome icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"> §
+    <!--stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--scripts-->
+    <script src="js/scroll.js"></script>
+    <script src="js/side-nav.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#about"><img src="../portfolio/img/logo.png" alt="my logo" class="logo"></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--side nav is opened after scroll, or on small screen-->
+    <button class="open-side-nav" onclick="toogleNav()">&#9776;</button> 
+
+    <nav class="side-nav">
+        <a href="#about"><img src="../portfolio/img/logo.png" alt="" class="logo"></a>
+        <ul>
+            <li><a href="#about" onclick="closeNav()">About</a></li>
+            <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+            <li><a href="#education" onclick="closeNav()">Education</a></li>
+            <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <div class="grid-item">
+                <div class="overlay"></div>
+                <img src="../portfolio/img/me.JPG" alt="me">
+                <!--<p class="img-desc">Róbert Páleš</p>-->
+            </div>
+            <div class="grid-item">
+                <div class="mydesc">
+                    <h2>Hi, my name is <span>Róbert Páleš,</span></h2>
+                    <p>20 years old student at Faculty of Information Technology in Brno & web developer</p>
+                </div>
+                <div class="resume">
+                    <a href="../portfolio/resume.html">Resume</a>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h1>My skills</h1>
+            <div class="skills-content">
+                <div class="skills-grid-item">
+                    <h2><span>Base skills</span></h2>
+                    <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div class="skills-grid-item">
+                    <h2><span>Advanced skills</span></h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SQL</li>
+                        <li>Git/Github</li>
+                    </ul>
+                </div>
+                <div class="skills-grid-item">
+                    <h2><span>Overall skills</span></h2>
+                    <ul>
+                        <li>Reliability</li>
+                        <li>Flexibility</li>
+                        <li>Teamwork</li>
+                        <li>Communication</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills-icons">
+                <i class="html"></i>
+                <i class="css"></i>
+                <i class="js"></i>
+                <i class="sql"></i>
+                <i class="python"></i>
+                <i class="c"></i> 
+                <i class="cpp"></i> 
+                <i class="git"></i>
+            </div>
+        </section>
+        <section id="education">
+            <h1>Education</h1>
+            <div class="education-content">
+                <div class="education-item">
+                    <div class="education-desc">
+                        <p><a href="https://www.spsdub.sk/">Secondary Technical School in Dubnica nad Váhom</a>, Electrotechnology 2875M</p>
+                        <p>09.2019 - 09.2023</p>
+                    </div>
+                    <img src="../portfolio/img/sps.jpg" alt="sps" class="sps">
+                </div>
+
+                <div class="education-item">
+                    <div class="education-desc">
+                        <p><a href="https://www.fit.vutbr.cz">Brno University of Technology, Faculty of Information Technology</a></p>
+                        <p>09.2023 - now</p>
+                    </div>
+                    <img src="../portfolio/img/fit.png" alt="" class="fit">
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <div class="contact-form">
+                <p>Feel free to contact me by submitting the form below</p>
+                <form action="">
+                    <label for="">Full name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                    <label for="">Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                    <label for="">Message</label>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Enter the message"></textarea >
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&#169 Copyright 2025. Made by <a href="#about">Róbert Páleš</a></p>
+            <a href="#about"><img src="../portfolio/img/logo.png" alt="" class="logo"></a>
+            <div class="footer-icons">
+                <a href="https://github.com/robertpales"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/robert_pales/"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/tvoje-meno"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollBtn" onclick="scrollTop()"><i class="fa-solid fa-arrow-up"></i></button>
+</body>
+
+</html>
