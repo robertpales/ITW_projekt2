@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RP</title>
+    <!--web title with icon-->
+    <title>Róbert Páleš</title>
+    <link rel="icon" href="img/logo.png">
     <!--font awesome icons-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"> §
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <!--stylesheet-->
     <link rel="stylesheet" href="style.css">
     <!--scripts-->
@@ -17,53 +19,58 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="#about"><img src="../portfolio/img/logo.png" alt="my logo" class="logo"></a>
+            <a href="#about"><img src="img/logo.png" alt="my logo" class="logo"></a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact </a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <span class="open-side-nav" onclick="toggleSideNav()">&#9776;</span> 
         </div>
     </header>
 
-    <!--side nav is opened after scroll, or on small screen-->
-    <button class="open-side-nav" onclick="toogleNav()">&#9776;</button> 
 
     <nav class="side-nav">
-        <a href="#about"><img src="../portfolio/img/logo.png" alt="" class="logo"></a>
-        <ul>
-            <li><a href="#about" onclick="closeNav()">About</a></li>
-            <li><a href="#skills" onclick="closeNav()">Skills</a></li>
-            <li><a href="#education" onclick="closeNav()">Education</a></li>
-            <li><a href="#contact" onclick="closeNav()">Contact</a></li>
-        </ul>
+        <span class="cancel" onclick="closeSideNav()">&#x2715;</span>
+        <div class="side-nav-content">
+            <a href="#about"><img src="img/logo.png" alt="" class="logo"></a>    
+            <ul>
+                <li><a href="#about" onclick="closeSideNav()">Home</a></li>
+                <li><a href="#skills" onclick="closeSideNav()">Skills</a></li>
+                <li><a href="#education" onclick="closeSideNav()">Education</a></li>
+                <li><a href="#contact" onclick="closeSideNav()">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main>
+        <div class="overlay" onclick="closeSideNav()"></div>
         <section id="about">
             <div class="grid-item">
                 <div class="overlay"></div>
-                <img src="../portfolio/img/me.JPG" alt="me">
-                <!--<p class="img-desc">Róbert Páleš</p>-->
+                <img src="img/me.png" alt="me">
             </div>
             <div class="grid-item">
                 <div class="mydesc">
-                    <h2>Hi, my name is <span>Róbert Páleš,</span></h2>
+                    <h2>Hey, I´m Róbert Páleš</h2>
                     <p>20 years old student at Faculty of Information Technology in Brno & web developer</p>
                 </div>
-                <div class="resume">
-                    <a href="../portfolio/resume.html">Resume</a>
+                <div class="contact-button">
+                    <a href="#contact">Contact me</a>
                 </div>
             </div>
         </section>
         <section id="skills">
-            <h1>My skills</h1>
+            <h1>Skills</h1>
+            <p>I am a technically oriented IT student with experience in both low-level and high-level programming languages. I enjoy building efficient, clean, and maintainable code 
+                — from system-level applications in C/C++ to modern web applications using HTML, CSS and JavaScript. My technical abilities are complemented by strong soft skills such as 
+                reliability, flexibility, and effective work in team environments. Additionally, I hold an Electrotechnical Qualification under Paragraph 21 of the Slovak Decree.</p>
             <div class="skills-content">
                 <div class="skills-grid-item">
-                    <h2><span>Base skills</span></h2>
+                    <h2><span>Basic skills</span></h2>
                     <ul>
                         <li>C</li>
                         <li>C++</li>
@@ -81,7 +88,7 @@
                     </ul>
                 </div>
                 <div class="skills-grid-item">
-                    <h2><span>Overall skills</span></h2>
+                    <h2><span>Soft skills</span></h2>
                     <ul>
                         <li>Reliability</li>
                         <li>Flexibility</li>
@@ -91,33 +98,34 @@
                 </div>
             </div>
             <div class="skills-icons">
-                <i class="html"></i>
-                <i class="css"></i>
-                <i class="js"></i>
-                <i class="sql"></i>
-                <i class="python"></i>
-                <i class="c"></i> 
-                <i class="cpp"></i> 
-                <i class="git"></i>
+                <i class="html"><img src="img/html.png" alt=""></i>
+                <i class="css"><img src="img/css.png" alt=""></i>
+                <i class="js"><img src="img/js.png" alt=""></i>
+                <i class="sql"><img src="img/sql.png" alt=""></i>
+                <i class="python"><img src="img/python.png" alt=""></i>
+                <i class="c"><img src="img/c.png" alt=""></i> 
+                <i class="cpp"><img src="img/cpp.png" alt=""></i> 
+                <i class="git"><img src="img/git.png" alt=""></i>
             </div>
+            <p></p>
         </section>
         <section id="education">
             <h1>Education</h1>
             <div class="education-content">
+                <div class="timeline"></div>
                 <div class="education-item">
-                    <div class="education-desc">
-                        <p><a href="https://www.spsdub.sk/">Secondary Technical School in Dubnica nad Váhom</a>, Electrotechnology 2875M</p>
-                        <p>09.2019 - 09.2023</p>
-                    </div>
-                    <img src="../portfolio/img/sps.jpg" alt="sps" class="sps">
+                    <p><a href="https://www.spsdub.sk/">Secondary Technical School in Dubnica nad Váhom</a></p>
+                </div>  
+                <div class="education-item date sps">
+                    <p>09.2019 - 09.2023</p>
+                    <img src="img/sps.jpg" alt="" class="sps">
                 </div>
-
                 <div class="education-item">
-                    <div class="education-desc">
-                        <p><a href="https://www.fit.vutbr.cz">Brno University of Technology, Faculty of Information Technology</a></p>
-                        <p>09.2023 - now</p>
-                    </div>
-                    <img src="../portfolio/img/fit.png" alt="" class="fit">
+                    <p><a href="https://www.fit.vutbr.cz">Brno University of Technology, Faculty of Information Technology</a></p>
+                </div>
+                <div class="education-item date fit">
+                    <p>09.2023 - now</p>
+                    <img src="img/fit.png" alt="" class="fit">
                 </div>
             </div>
         </section>
@@ -141,16 +149,16 @@
     <footer>
         <div class="footer-content">
             <p>&#169 Copyright 2025. Made by <a href="#about">Róbert Páleš</a></p>
-            <a href="#about"><img src="../portfolio/img/logo.png" alt="" class="logo"></a>
+            <a href="#about"><img src="img/logo.png" alt="" class="logo"></a>
             <div class="footer-icons">
                 <a href="https://github.com/robertpales"><i class="fab fa-github"></i></a>
                 <a href="https://www.instagram.com/robert_pales/"><i class="fab fa-instagram"></i></a>
-                <a href="https://facebook.com/tvoje-meno"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.facebook.com/rooobert.palessss"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
-    <button id="scrollBtn" onclick="scrollTop()"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="scroll-button" onclick="scrollTop()"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 
 </html>

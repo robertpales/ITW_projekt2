@@ -1,6 +1,6 @@
-function slider() 
+function scroll() 
 {
-    const scrollBtn = document.getElementById("scrollBtn");
+    const scrollBtn = document.getElementById("scroll-button");
 
     function scrollFunction() 
     {
@@ -21,4 +21,4 @@ function slider()
     });
 }
 
-window.addEventListener("DOMContentLoaded", slider);
+window.addEventListener("DOMContentLoaded", scroll);
