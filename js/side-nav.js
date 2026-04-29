@@ -1,16 +1,23 @@
+/** 
+ * Author: Róbert Páleš
+ * File: side-nav.js
+ * Date: 27.4.2025
+ * Hamburger menu
+*/
+
 var preScroll = window.pageYOffset;
 
-window.onscroll = function () 
+window.onscroll = function() 
 {
     const currentPos = window.pageYOffset;
     const header = document.querySelector(".main-nav ul");
     const button = document.querySelector(".open-side-nav");
 
     if (currentPos === 0) 
-        {
+    {
         header.style.transform = "translateY(0)";
         button.classList.remove("visible");
-        closeNav();
+        closeSideNav();
     } 
     else 
     {
@@ -21,7 +28,8 @@ window.onscroll = function ()
     preScroll = currentPos;
 };
 
-function toggleSideNav() {
+function toggleSideNav() 
+{
     const nav = document.querySelector(".side-nav");
     const mainNav = document.querySelector("header");
     const overlay = document.querySelector(".overlay");
@@ -31,7 +39,8 @@ function toggleSideNav() {
     overlay.classList.add("active");
 }
 
-function closeSideNav() {
+function closeSideNav() 
+{
     const nav = document.querySelector(".side-nav");
     const mainNav = document.querySelector("header");
     const overlay = document.querySelector(".overlay");
