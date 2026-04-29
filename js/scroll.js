@@ -1,21 +1,28 @@
+/** 
+ * Author: Róbert Páleš
+ * File: scroll.js
+ * Date: 30.4.2025
+ * Scroll button behavior
+*/
+
 function scroll() 
 {
-    const scrollBtn = document.getElementById("scroll-button");
+    const button = document.getElementById("scroll-button");
 
     function scrollFunction() 
     {
-        if (window.scrollY > 20) 
+        if (window.scrollY > 0)
         {
-            scrollBtn.style.display = "block";
+            button.classList.add("visible");
         } 
         else 
         {
-            scrollBtn.style.display = "none";
+            button.classList.remove("visible");
         }
     }
 
     window.addEventListener("scroll", scrollFunction);
-    scrollBtn.addEventListener("click", () => 
+    button.addEventListener("click", () => 
     {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
